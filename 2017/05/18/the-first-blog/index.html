@@ -388,12 +388,18 @@
 
     
         <section class="youyan" id="comments">
-    <!-- UY BEGIN -->
-	<div id="uyan_frame"></div>
-	<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2133913"></script>
-	<!-- UY END -->
-</section>
+    <script>
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = 'http://v2.uyan.cc/code/uyan.js?uid=2133913';
+            (d.head || d.body).appendChild(s);
+        }
+    </script>
+    
+    <script> loadComment(); </script>
 
+    <div id="uyan_frame"></div>
+</section>
     
 
 
