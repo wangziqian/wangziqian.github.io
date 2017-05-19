@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Zain的小屋</title>
+  <subtitle>目标！全栈</subtitle>
+  <link href="/blog/atom.xml" rel="self"/>
+  
+  <link href="http://zainbolg.xyz/blog/"/>
+  <updated>2017-05-18T13:00:20.581Z</updated>
+  <id>http://zainbolg.xyz/blog/</id>
+  
+  <author>
+    <name>Zain_Wang</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>the first blog</title>
+    <link href="http://zainbolg.xyz/blog/2017/05/18/the-first-blog/"/>
+    <id>http://zainbolg.xyz/blog/2017/05/18/the-first-blog/</id>
+    <published>2017-05-18T11:05:46.000Z</published>
+    <updated>2017-05-18T13:00:20.581Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><h3 id="测试1"><a href="#测试1" class="headerlink" title="测试1"></a>测试1</h3><h3 id="测试2"><a href="#测试2" class="headerlink" title="测试2"></a>测试2</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">       var loadComment = <span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">           var d = document, s = d.createElement(<span class="string">'script'</span>);</div><div class="line">           s.src = <span class="string">'http://v2.uyan.cc/code/uyan.js?uid=&lt;%= theme.youyan.id%&gt;'</span>;</div><div class="line">           (d.head || d.body).appendChild(s);</div><div class="line">       &#125;</div><div class="line">   &lt;/script&gt;</div><div class="line">   &lt;%- partial(<span class="string">'click2show'</span>) %&gt;</div><div class="line">   &lt;div id=<span class="string">"uyan_frame"</span>&gt;&lt;/div&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line"> 			var loadComment = <span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">           var d = document, s = d.createElement(<span class="string">'script'</span>);</div><div class="line">           s.src = <span class="string">'http://v2.uyan.cc/code/uyan.js?uid=&lt;%= theme.youyan.id%&gt;'</span>;</div><div class="line">           (d.head || d.body).appendChild(s);</div><div class="line">       &#125;</div><div class="line">   &lt;/script&gt;</div><div class="line">   &lt;%- partial(<span class="string">'click2show'</span>) %&gt;</div><div class="line">   &lt;div id=<span class="string">"uyan_frame"</span>&gt;&lt;/div&gt;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      This is my first blog
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://zainbolg.xyz/blog/2017/05/17/hello-world/"/>
+    <id>http://zainbolg.xyz/blog/2017/05/17/hello-world/</id>
+    <published>2017-05-17T09:53:14.217Z</published>
+    <updated>2017-05-18T11:25:15.591Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      Welcome to [Hexo]! This is your very first post.
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
