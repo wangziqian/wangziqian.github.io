@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Zain的小屋</title>
   <subtitle>目标！全栈</subtitle>
-  <link href="/blog/atom.xml" rel="self"/>
+  <link href="/atom.xml" rel="self"/>
   
   <link href="http://zainbolg.xyz/"/>
   <updated>2017-05-18T13:00:20.581Z</updated>
