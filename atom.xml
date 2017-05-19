@@ -4,9 +4,9 @@
   <subtitle>目标！全栈</subtitle>
   <link href="/blog/atom.xml" rel="self"/>
   
-  <link href="http://zainbolg.xyz/blog/"/>
+  <link href="http://zainbolg.xyz/"/>
   <updated>2017-05-18T13:00:20.581Z</updated>
-  <id>http://zainbolg.xyz/blog/</id>
+  <id>http://zainbolg.xyz/</id>
   
   <author>
     <name>Zain_Wang</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>the first blog</title>
-    <link href="http://zainbolg.xyz/blog/2017/05/18/the-first-blog/"/>
-    <id>http://zainbolg.xyz/blog/2017/05/18/the-first-blog/</id>
+    <link href="http://zainbolg.xyz/2017/05/18/the-first-blog/"/>
+    <id>http://zainbolg.xyz/2017/05/18/the-first-blog/</id>
     <published>2017-05-18T11:05:46.000Z</published>
     <updated>2017-05-18T13:00:20.581Z</updated>
     
@@ -36,8 +36,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://zainbolg.xyz/blog/2017/05/17/hello-world/"/>
-    <id>http://zainbolg.xyz/blog/2017/05/17/hello-world/</id>
+    <link href="http://zainbolg.xyz/2017/05/17/hello-world/"/>
+    <id>http://zainbolg.xyz/2017/05/17/hello-world/</id>
     <published>2017-05-17T09:53:14.217Z</published>
     <updated>2017-05-18T11:25:15.591Z</updated>
     
