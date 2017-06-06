@@ -15,20 +15,20 @@
 
 
 
-<meta name="description" content="了解javascript的发展历史，javascript的功能，javascript入门。">
-<meta name="keywords" content="javascript,前端">
+<meta name="description" content="javascript的BOM概念，浏览器窗口组成">
+<meta name="keywords" content="-javascript -BOM">
 <meta property="og:type" content="article">
-<meta property="og:title" content="javascript学习笔记(一)---Begin">
-<meta property="og:url" content="http://zainbolg.xyz/2017/06/04/01-javascript-begin/index.html">
+<meta property="og:title" content="javascript学习笔记(二)---BOM">
+<meta property="og:url" content="http://zainbolg.xyz/2017/06/05/02-javascript-bom/index.html">
 <meta property="og:site_name" content="Zain的小屋">
-<meta property="og:description" content="了解javascript的发展历史，javascript的功能，javascript入门。">
-<meta property="og:image" content="http://zainbolg.xyz/2017/06/04/01-javascript-begin/js_add.png">
-<meta property="og:image" content="http://zainbolg.xyz/2017/06/04/01-javascript-begin/jd.png">
-<meta property="og:updated_time" content="2017-06-05T13:48:45.712Z">
+<meta property="og:description" content="javascript的BOM概念，浏览器窗口组成">
+<meta property="og:image" content="http://zainbolg.xyz/2017/06/05/02-javascript-bom/screen.png">
+<meta property="og:image" content="http://zainbolg.xyz/2017/06/05/02-javascript-bom/imgChange.png">
+<meta property="og:updated_time" content="2017-06-06T08:51:15.625Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="javascript学习笔记(一)---Begin">
-<meta name="twitter:description" content="了解javascript的发展历史，javascript的功能，javascript入门。">
-<meta name="twitter:image" content="http://zainbolg.xyz/2017/06/04/01-javascript-begin/js_add.png">
+<meta name="twitter:title" content="javascript学习笔记(二)---BOM">
+<meta name="twitter:description" content="javascript的BOM概念，浏览器窗口组成">
+<meta name="twitter:image" content="http://zainbolg.xyz/2017/06/05/02-javascript-bom/screen.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -60,7 +60,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>javascript学习笔记(一)---Begin | Zain的小屋</title>
+<title>javascript学习笔记(二)---BOM | Zain的小屋</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -277,11 +277,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-01-javascript-begin" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-02-javascript-bom" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/06/04/01-javascript-begin/" class="article-date">
-      <time datetime="2017-06-04T09:21:39.000Z" itemprop="datePublished">2017-06-04</time>
+      <a href="/2017/06/05/02-javascript-bom/" class="article-date">
+      <time datetime="2017-06-05T12:53:28.000Z" itemprop="datePublished">2017-06-05</time>
 </a>
 
 
@@ -296,7 +296,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      javascript学习笔记(一)---Begin
+      javascript学习笔记(二)---BOM
     </h1>
   
 
@@ -307,7 +307,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript-BOM/">-javascript -BOM</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -317,19 +317,20 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="Javascript发展史"><a href="#Javascript发展史" class="headerlink" title="Javascript发展史"></a>Javascript发展史</h2><h3 id="生产历史"><a href="#生产历史" class="headerlink" title="生产历史"></a>生产历史</h3><p>javascript产生自Netscape公司，因为当时是拨号上网，网速理论能达到的最大值是56kb/s，为了提高web响应速度，javascript能做到的就是尽可能能在客户端解决的事情不让服务器去做，减少客户端向服务器发送请求响应。<br>javascript的前身是livescript，为了让这种语言流行起来，故更名为javascript。微软同时也开发了和它相同功能的语言JScript。</p>
-<h3 id="jscript和javascript的统一"><a href="#jscript和javascript的统一" class="headerlink" title="jscript和javascript的统一"></a>jscript和javascript的统一</h3><p>考虑到有两种功能一样的语言运行只在不同的浏览器环境下,为了减轻程序员学习负担，国际标准化组织出面，统一两种语言，程序员只用学习一种语言即可。<br>该标准由ECMA组织制定的标准，也称为ECMAScript。其只制定了语言的核心，与运行环境无关，即可以在客户端也可以在服务器端运行。</p>
-<h3 id="脚本语言"><a href="#脚本语言" class="headerlink" title="脚本语言"></a>脚本语言</h3><p>脚本语言的定义是能指挥已有程序工作的语言，就好比演员的剧本，指挥演员演什么戏。很显然Javascript就是这样的脚本语言。</p>
-<h2 id="JavaScript如何操作程序"><a href="#JavaScript如何操作程序" class="headerlink" title="JavaScript如何操作程序"></a>JavaScript如何操作程序</h2><h3 id="代码计算"><a href="#代码计算" class="headerlink" title="代码计算"></a>代码计算</h3><p>比如在两个input里分别写上值，点击按钮求得和。这里需要按钮的onclick实现一个add方法，让两个input里的值相加。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">数据1&lt;input id=<span class="string">"num1"</span>&gt;</div><div class="line">数据2&lt;input id=<span class="string">"num2"</span>&gt;</div><div class="line">&lt;button onclick=<span class="string">"add()"</span>&gt;求和&lt;/button&gt;</div><div class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</div><div class="line">	<span class="keyword">function</span> <span class="function"><span class="title">add</span></span>()&#123;</div><div class="line">		var num1=document.getElementById(<span class="string">"num1"</span>).value-0;</div><div class="line">		var num2=document.getElementById(<span class="string">"num2"</span>).value-0;</div><div class="line">		var sum = num1+num2;</div><div class="line">		alert(sum);</div><div class="line">		&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
-<p>效果图：<br><img src="/2017/06/04/01-javascript-begin/js_add.png" alt=""></p>
-<h3 id="通过更改html"><a href="#通过更改html" class="headerlink" title="通过更改html"></a>通过更改html</h3><p>类似京东的图片切换<br><img src="/2017/06/04/01-javascript-begin/jd.png" alt=""><br>可以发现京东实现的图片切换原理是把所用图片放在一起，改变它们的z-index,z-index最高的图片将其余的覆盖。</p>
-<h3 id="操作浏览器"><a href="#操作浏览器" class="headerlink" title="操作浏览器"></a>操作浏览器</h3><p>可以操作浏览器的地址栏，历史记录等等，也就是BOM<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">&lt;button onclick=<span class="string">"window.location.replace('http://www.baidu.com')"</span>&gt;baidu&lt;/button&gt;</div><div class="line">&lt;button onclick=<span class="string">"window.location.href='http://www.baidu.com'"</span>&gt;reload&lt;/button&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure></p>
-<h2 id="Javascript书写位置"><a href="#Javascript书写位置" class="headerlink" title="Javascript书写位置"></a>Javascript书写位置</h2><h3 id="在onxxx属性中"><a href="#在onxxx属性中" class="headerlink" title="在onxxx属性中"></a>在onxxx属性中</h3><p><code>&lt;button onclick=&quot;window.alert(&#39;javascript&#39;)&quot;&gt;javascript&lt;/button&gt;</code><br>只能在当前标签中使用</p>
-<h3 id="写在外部文件导入"><a href="#写在外部文件导入" class="headerlink" title="写在外部文件导入"></a>写在外部文件导入</h3><p>用script标签的src导入<br><code>&lt;script type=&quot;text\javascript&quot; src=&quot;js/add.js&quot;&gt;&lt;/script&gt;</code><br>能在任何地方使用，但是会向服务器发送多一个请求</p>
-<h3 id="写在script元素内部"><a href="#写在script元素内部" class="headerlink" title="写在script元素内部"></a>写在script元素内部</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">	var index = 0;</div><div class="line">	var imgs=[&apos;58c0b2dcN78fd0fb3.jpg&apos;,&apos;5925278fN8d12c7cd.jpg&apos;,&apos;59258c64N1d4eea45.jpg&apos;,&apos;59282748N46e975ef.jpg&apos;];</div><div class="line">	window.setInterval(function() &#123;</div><div class="line">		document.getElementById(&quot;myimg&quot;).src=&quot;../imgs/&quot;+imgs[index];</div><div class="line">		if(index==3)&#123;</div><div class="line">			index=0;</div><div class="line">			&#125;</div><div class="line">		index++;</div><div class="line">	&#125;, 1000);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
-<p>能在整个网页中使用</p>
-<h4 id="三种方法的可见性"><a href="#三种方法的可见性" class="headerlink" title="三种方法的可见性"></a>三种方法的可见性</h4><p>从小到大：onxx script标签 外部导入<br>三种方式不可混合使用。</p>
-<h3 id="a标签里的href"><a href="#a标签里的href" class="headerlink" title="a标签里的href"></a>a标签里的href</h3><p><code>&lt;a href=&quot;javascript:alert(&quot;sb&quot;)&quot;&gt;js&lt;/a&gt;</code><br>写在a标签的href里</p>
+        <h2 id="浏览器窗口组成部分"><a href="#浏览器窗口组成部分" class="headerlink" title="浏览器窗口组成部分"></a>浏览器窗口组成部分</h2><h3 id="地址栏—location"><a href="#地址栏—location" class="headerlink" title="地址栏—location"></a>地址栏—location</h3><p>主要有属性href和两个方法reload和replace<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;button onclick=&quot;window.location.replace(&apos;http://www.baidu.com&apos;)&quot;&gt;baidu&lt;/button&gt;</div><div class="line">&lt;button onclick=&quot;window.location.href=&apos;http://www.baidu.com&apos;&quot;&gt;reload&lt;/button&gt;</div><div class="line">&lt;button onclick=&quot;window.location.reload()&quot;&gt;刷新&lt;/button&gt;</div></pre></td></tr></table></figure></p>
+<p>通过更改location的href属性可以切换到新的URL，转到新页面<br>reload就是刷新页面，重新载入当前页<br>replace传入一个URL，会用对应的URL替换当前页。<br>replace和href跳转区别，前者无法返回，后者可以返回。</p>
+<h3 id="历史—history"><a href="#历史—history" class="headerlink" title="历史—history"></a>历史—history</h3><p>history有三个方法<br>back() 再次访问当前URL之前的哪个URL，等价于history.go(-1)<br>forward()再次访问当前URL之后的URL，等价于history.go(1)<br>go()访问的URL在history的URL列表中的相对位置。正数向前移动，负数向后移动，如上。</p>
+<h3 id="屏幕—screen"><a href="#屏幕—screen" class="headerlink" title="屏幕—screen"></a>屏幕—screen</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">	console.dir(window.screen);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>在控制台打出screen的相关属性<br><img src="/2017/06/05/02-javascript-bom/screen.png" alt=""></p>
+<h3 id="浏览器相关信息—navigator"><a href="#浏览器相关信息—navigator" class="headerlink" title="浏览器相关信息—navigator"></a>浏览器相关信息—navigator</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">function navigator()&#123;</div><div class="line">		var txt = &quot;&lt;p&gt;Browser CodeName: &quot; + navigator.appCodeName + &quot;&lt;/p&gt;&quot;;//返回浏览器的代码名通常值为&quot;Mozilla&quot;</div><div class="line">		txt += &quot;&lt;p&gt;Browser Name: &quot; + navigator.appName + &quot;&lt;/p&gt;&quot;;//浏览器名称</div><div class="line">		txt += &quot;&lt;p&gt;Browser Version: &quot; + navigator.appVersion + &quot;&lt;/p&gt;&quot;;浏览器的平台和版本信息</div><div class="line">		txt += &quot;&lt;p&gt;Cookies Enabled: &quot; + navigator.cookieEnabled + &quot;&lt;/p&gt;&quot;;是否启用cookie</div><div class="line">		txt += &quot;&lt;p&gt;Platform: &quot; + navigator.platform + &quot;&lt;/p&gt;&quot;;//运行浏览器的操作系统</div><div class="line">		txt += &quot;&lt;p&gt;User-agent header: &quot; + navigator.userAgent + &quot;&lt;/p&gt;&quot;;//浏览器用于HTTP请求的用户代理头的值</div><div class="line">		txt += &quot;&lt;p&gt;User-agent language: &quot; + navigator.systemLanguage + &quot;&lt;/p&gt;&quot;;//获取系统语言</div><div class="line">		alert(txt);</div><div class="line">		&#125;</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;button onclick=&quot;navigator()&quot;&gt;点击&lt;/button&gt;</div></pre></td></tr></table></figure>
+<h2 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h2><p>在不同的浏览器下，javascript的代码对window以及location等属性都是标准化的，这个大家都遵守的标准就是BOM—Browser Object Model</p>
+<h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>JavaScript是面向对象的语言，需要对象，而操作浏览器就需要BOM提供一个对象，操作这个对象想到于操作浏览器，类似地球和地球仪的概念。这个对象是浏览器的对象模型。</p>
+<h3 id="window对象"><a href="#window对象" class="headerlink" title="window对象"></a>window对象</h3><p>window对象继承了Global，是全局对象，用法类似java里的this。所有的表达式都在window对象的环境中计算。同this一样，window可以省略，如window.document,省略成document。<br>window因为继承了Global，也继承了JavaScript定义的所有全局函数</p>
+<h3 id="例子：显示当前时间"><a href="#例子：显示当前时间" class="headerlink" title="例子：显示当前时间"></a>例子：显示当前时间</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">	window.setInterval(function() &#123;</div><div class="line">		var today = new Date();</div><div class="line">		var yy = today.getFullYear();</div><div class="line">		var mm = today.getMonth()+1;</div><div class="line">		var dd = today.getDate();</div><div class="line">		var hh = today.getHours();</div><div class="line">		var min = today.getMinutes();</div><div class="line">		var ss = today.getSeconds();</div><div class="line">		document.getElementById(&quot;myclock&quot;).innerHTML=yy+&quot;-&quot;+mm+&quot;-&quot;+dd+&quot; &quot;+hh+&quot;:&quot;+min+&quot;:&quot;+ss;</div><div class="line">	&#125;, 1000)</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>在一个span中显示，id为myclock<br>window.setInterval的功能是周期性的执行括号中的代码，单位毫秒。每秒获取并显示一次当前时间，实现了钟表的效果。<br>想要做出钟表的效果还可以用setTimeout<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function showtime()&#123;</div><div class="line">	//时间代码省略</div><div class="line">		window.setTimeout(showtime, 1000);</div><div class="line">		&#125;</div><div class="line">	window.setTimeout(showtime, 1000);</div></pre></td></tr></table></figure></p>
+<p>setTimeout的功能是让代码延迟运行，单位毫秒，但是代码只会执行一次，想要实现循环则需要再在外面调用一次。</p>
+<h3 id="模仿京东的图片切换"><a href="#模仿京东的图片切换" class="headerlink" title="模仿京东的图片切换"></a>模仿京东的图片切换</h3><p>实现图片切换有多种方法，京东用的是更改图片的z-index值，让图片相互覆盖达成目的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">&lt;style type=&quot;text/css&quot;&gt;</div><div class="line">	#mydiv&#123;</div><div class="line">		position:relative;</div><div class="line">	&#125;</div><div class="line">	#mydiv img&#123;</div><div class="line">		position:absolute;</div><div class="line">		left:0px;</div><div class="line">		top:0px;</div><div class="line">	&#125;</div><div class="line">&lt;/style&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;div id=&quot;mydiv&quot;&gt;</div><div class="line">	&lt;img alt=&quot;&quot; src=&quot;../imgs/58c0b2dcN78fd0fb3.jpg&quot;&gt;</div><div class="line">	&lt;img alt=&quot;&quot; src=&quot;../imgs/5925278fN8d12c7cd.jpg&quot;&gt;</div><div class="line">	&lt;img alt=&quot;&quot; src=&quot;../imgs/59258c64N1d4eea45.jpg&quot;&gt;</div><div class="line">	&lt;img alt=&quot;&quot; src=&quot;../imgs/59282748N46e975ef.jpg&quot;&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">	&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">		var index=0;</div><div class="line">		window.setInterval(function() &#123;</div><div class="line">			var imgs = document.getElementById(&quot;mydiv&quot;).getElementsByTagName(&quot;img&quot;);</div><div class="line"></div><div class="line">			for(var i=0;i&lt;imgs.length;i++)&#123;</div><div class="line">				imgs[i].style.zIndex=0;</div><div class="line">				&#125;</div><div class="line">			imgs[index].style.zIndex=1;</div><div class="line">			index++;</div><div class="line">			if(index==4)&#123;</div><div class="line">				index=0;</div><div class="line">				&#125;</div><div class="line">		&#125;, 2000);</div><div class="line">	&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure></p>
+<p>先让图片通过定位都放在一个div里。<br>这里用setInterval周期性的更改图片的z-index，每次更改时要把所有图片的z-index清零。循环到第四张图片时，要再跳到第一张，更改index即可。<br><img src="/2017/06/05/02-javascript-bom/imgChange.png" alt=""> </p>
 
       
     </div>
@@ -338,13 +339,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/06/04/01-javascript-begin/">javascript学习笔记(一)---Begin</a></p>
+        <p><span>本文标题:</span><a href="/2017/06/05/02-javascript-bom/">javascript学习笔记(二)---BOM</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Zain_Wang</a></p>
-        <p><span>发布时间:</span>2017-06-04, 17:21:39</p>
-        <p><span>最后更新:</span>2017-06-05, 21:48:45</p>
+        <p><span>发布时间:</span>2017-06-05, 20:53:28</p>
+        <p><span>最后更新:</span>2017-06-06, 16:51:15</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/06/04/01-javascript-begin/" title="javascript学习笔记(一)---Begin">http://zainbolg.xyz/2017/06/04/01-javascript-begin/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://zainbolg.xyz/2017/06/04/01-javascript-begin/　　作者: Zain_Wang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/06/05/02-javascript-bom/" title="javascript学习笔记(二)---BOM">http://zainbolg.xyz/2017/06/05/02-javascript-bom/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://zainbolg.xyz/2017/06/05/02-javascript-bom/　　作者: Zain_Wang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -356,16 +357,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/06/05/02-javascript-bom/">
-                    javascript学习笔记(二)---BOM
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/05/20/01-java-01bean/">
-                    java网络聊天室(一)
+                <a href="/2017/06/04/01-javascript-begin/">
+                    javascript学习笔记(一)---Begin
                 </a>
             </div>
         
@@ -377,7 +372,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Javascript发展史"><span class="toc-number">1.</span> <span class="toc-text">Javascript发展史</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#生产历史"><span class="toc-number">1.1.</span> <span class="toc-text">生产历史</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jscript和javascript的统一"><span class="toc-number">1.2.</span> <span class="toc-text">jscript和javascript的统一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#脚本语言"><span class="toc-number">1.3.</span> <span class="toc-text">脚本语言</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript如何操作程序"><span class="toc-number">2.</span> <span class="toc-text">JavaScript如何操作程序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#代码计算"><span class="toc-number">2.1.</span> <span class="toc-text">代码计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#通过更改html"><span class="toc-number">2.2.</span> <span class="toc-text">通过更改html</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#操作浏览器"><span class="toc-number">2.3.</span> <span class="toc-text">操作浏览器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Javascript书写位置"><span class="toc-number">3.</span> <span class="toc-text">Javascript书写位置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#在onxxx属性中"><span class="toc-number">3.1.</span> <span class="toc-text">在onxxx属性中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#写在外部文件导入"><span class="toc-number">3.2.</span> <span class="toc-text">写在外部文件导入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#写在script元素内部"><span class="toc-number">3.3.</span> <span class="toc-text">写在script元素内部</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#三种方法的可见性"><span class="toc-number">3.3.1.</span> <span class="toc-text">三种方法的可见性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#a标签里的href"><span class="toc-number">3.4.</span> <span class="toc-text">a标签里的href</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#浏览器窗口组成部分"><span class="toc-number">1.</span> <span class="toc-text">浏览器窗口组成部分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#地址栏—location"><span class="toc-number">1.1.</span> <span class="toc-text">地址栏—location</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#历史—history"><span class="toc-number">1.2.</span> <span class="toc-text">历史—history</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#屏幕—screen"><span class="toc-number">1.3.</span> <span class="toc-text">屏幕—screen</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#浏览器相关信息—navigator"><span class="toc-number">1.4.</span> <span class="toc-text">浏览器相关信息—navigator</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BOM"><span class="toc-number">2.</span> <span class="toc-text">BOM</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#概念"><span class="toc-number">2.1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#window对象"><span class="toc-number">2.2.</span> <span class="toc-text">window对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#例子：显示当前时间"><span class="toc-number">2.3.</span> <span class="toc-text">例子：显示当前时间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模仿京东的图片切换"><span class="toc-number">2.4.</span> <span class="toc-text">模仿京东的图片切换</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -413,7 +408,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"javascript学习笔记(一)---Begin　| Zain的小屋　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"javascript学习笔记(二)---BOM　| Zain的小屋　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -438,15 +433,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/06/05/02-javascript-bom/" title="上一篇: javascript学习笔记(二)---BOM">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/05/20/01-java-01bean/" title="下一篇: java网络聊天室(一)">
+            <a href="/2017/06/04/01-javascript-begin/" title="下一篇: javascript学习笔记(一)---Begin">
                 <i class="fa fa-angle-right"></i>
             </a>
         
