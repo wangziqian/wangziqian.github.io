@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zainbolg.xyz/"/>
-  <updated>2017-06-06T08:51:15.625Z</updated>
+  <updated>2017-06-06T08:54:14.459Z</updated>
   <id>http://zainbolg.xyz/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://zainbolg.xyz/2017/06/05/02-javascript-bom/"/>
     <id>http://zainbolg.xyz/2017/06/05/02-javascript-bom/</id>
     <published>2017-06-05T12:53:28.000Z</published>
-    <updated>2017-06-06T08:51:15.625Z</updated>
+    <updated>2017-06-06T08:54:14.459Z</updated>
     
     <content type="html"><![CDATA[<h2 id="浏览器窗口组成部分"><a href="#浏览器窗口组成部分" class="headerlink" title="浏览器窗口组成部分"></a>浏览器窗口组成部分</h2><h3 id="地址栏—location"><a href="#地址栏—location" class="headerlink" title="地址栏—location"></a>地址栏—location</h3><p>主要有属性href和两个方法reload和replace<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;button onclick=&quot;window.location.replace(&apos;http://www.baidu.com&apos;)&quot;&gt;baidu&lt;/button&gt;</div><div class="line">&lt;button onclick=&quot;window.location.href=&apos;http://www.baidu.com&apos;&quot;&gt;reload&lt;/button&gt;</div><div class="line">&lt;button onclick=&quot;window.location.reload()&quot;&gt;刷新&lt;/button&gt;</div></pre></td></tr></table></figure></p>
 <p>通过更改location的href属性可以切换到新的URL，转到新页面<br>reload就是刷新页面，重新载入当前页<br>replace传入一个URL，会用对应的URL替换当前页。<br>replace和href跳转区别，前者无法返回，后者可以返回。</p>
@@ -45,7 +45,9 @@
     </summary>
     
     
-      <category term="-javascript -BOM" scheme="http://zainbolg.xyz/tags/javascript-BOM/"/>
+      <category term="javascript" scheme="http://zainbolg.xyz/tags/javascript/"/>
+    
+      <category term="BOM" scheme="http://zainbolg.xyz/tags/BOM/"/>
     
   </entry>
   
