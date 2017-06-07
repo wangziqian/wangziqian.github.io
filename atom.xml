@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zainbolg.xyz/"/>
-  <updated>2017-06-06T08:54:14.459Z</updated>
+  <updated>2017-06-07T09:07:04.812Z</updated>
   <id>http://zainbolg.xyz/</id>
   
   <author>
@@ -14,6 +14,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>javascript学习笔记(三)---DOM</title>
+    <link href="http://zainbolg.xyz/2017/06/06/03-javascript-dom/"/>
+    <id>http://zainbolg.xyz/2017/06/06/03-javascript-dom/</id>
+    <published>2017-06-06T08:56:53.000Z</published>
+    <updated>2017-06-07T09:07:04.812Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>DOM，全程Document Object Model。之前说过javascript是面向对象的语言，HTML元素是文本，javascript操作它们需要对应的对象。DOM标准就提供了这样一套接口，由浏览器实现接口，供程序员调用。BOM是通过对象操作浏览器，DOM是通过对象操作HTML文本。<br>正因为有DOM的存在，让javascript程序可以运行再多个浏览器上。</p>
+<h3 id="HTML与XML"><a href="#HTML与XML" class="headerlink" title="HTML与XML"></a>HTML与XML</h3><p>XML全称eXtensiable markup language:可扩展标记语句。<br>与HTML标签的区别在于，html是预先定义好的，不能任意添加，即不可扩展。并且xml是数据交换格式，不是用来再浏览器显示的。相对于HTML,XML语言更为严格，大小写敏感。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;user&gt;</div><div class="line">&lt;name&gt;zhangsan&lt;/name&gt;</div><div class="line">&lt;pwd&gt;123&lt;/pwd&gt;</div><div class="line">&lt;/user&gt;</div></pre></td></tr></table></figure></p>
+<p>上面是一个xml例子，显然html没有user等标签。<br>DOM也可以操作XML，不仅仅只用HTML</p>
+<h3 id="DOM分级"><a href="#DOM分级" class="headerlink" title="DOM分级"></a>DOM分级</h3><p>DOM1是初版，DOM2把这个标准分为两个，功能性大大增强<br>dom2：core 核心部分，<br>dom2：html html部分，<br>dom0：最早的DHTML</p>
+<h3 id="DOM标准总结"><a href="#DOM标准总结" class="headerlink" title="DOM标准总结"></a>DOM标准总结</h3><p>对对象的操作无外乎4项，增删查改</p>
+<h4 id="元素查找"><a href="#元素查找" class="headerlink" title="元素查找"></a>元素查找</h4><p>dom常用有五种方法查找元素<br>1.通过id document.getElementById(“元素id”); id不可重复，所以最多找到一个元素<br>2.通过标签名 document.getElementByTagName(“标签名”); 标签名可以重复，返回一个对象集合。<br>3.通过元素name document.getElementByName(name); 同上返回一个集合<br>4.通过class document.getElementByClass(class); 同上返回一个集合<br>5.通过选择器查找<br>按选择器查找是比较常用的，可以选择返回一个元素或元素集合<br>`document.querySelector(‘selector’);  document.querySelector(‘selector’);``<br>在定义css时，我们用到些许选择器，可以根据它们来找到我们想要的元素。<br>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var body = document.querySelector(&quot;body&quot;);</div><div class="line">var myDiv = document.querySelector(&quot;#myDiv&quot;);</div><div class="line">var classDiv = document.querySelector(&quot;.classDiv&quot;);</div></pre></td></tr></table></figure></p>
+<p>当有同选择器元素时，querySelector返回第一个元素。<br>querySelectorAll一样，但是返回的是一个元素集合</p>
+<h4 id="元素创建"><a href="#元素创建" class="headerlink" title="元素创建"></a>元素创建</h4><p>创建html元素的两种方法<br>1.document.createElement<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var img1 = document.createElement(&quot;img&quot;);</div><div class="line">img1.setAttribute(&quot;src&quot;,&quot;../img.png&quot;);</div><div class="line">document.body.appendChild(img1);</div></pre></td></tr></table></figure></p>
+<p>2.调用元素的构造函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var img2 = new Image();</div><div class="line">img2.src=&quot;../img.png&quot;;</div><div class="line">document.body.appendChild(img2);</div></pre></td></tr></table></figure></p>
+<p>创建文本元素<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var text = document.createTextNode(&quot;xxxxx&quot;);</div><div class="line">document.body.appendChild(text);</div></pre></td></tr></table></figure></p>
+<h4 id="元素插入"><a href="#元素插入" class="headerlink" title="元素插入"></a>元素插入</h4><p>insertBefore和appendChild<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;script type=&quot;text/javascript&quot;&gt; </div><div class="line">   var text=document.createTextNode(&quot;yyyyyyyyyyyyyy&quot;); </div><div class="line">   // document.body.insertBefore(text, document.getElementById(&quot;mySpan&quot;)); </div><div class="line">   document.getElementById(&quot;mySpan&quot;).parentNode.insertBefore(text, document.getElementById(&quot;mySpan&quot;)); </div><div class="line">   //通过parentNode去找到父节点更为严谨</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p>两者的区别：都可以在父元素内追加子元素，insertBefore可以在已有元素前插入新元素。通过nextSiblings也可以在后面添加。比appendChild更为灵活。</p>
+<h4 id="元素删除"><a href="#元素删除" class="headerlink" title="元素删除"></a>元素删除</h4><p>parentNode.removeChild(“”)<br>先找到该元素，再删除<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt; </div><div class="line">&lt;span id=&quot;mySpan&quot;&gt;xxxxxxxxxxx&lt;/span&gt; </div><div class="line">&lt;button onclick=&quot;delSpan()&quot;&gt;删除&lt;/button&gt; </div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt; </div><div class="line">  function delSpan()&#123; </div><div class="line">   var mySpan=document.getElementById(&quot;mySpan&quot;); </div><div class="line">   //调用 </div><div class="line">   mySpan.parentNode.removeChild(mySpan); </div><div class="line">  &#125; </div><div class="line">&lt;/script&gt; </div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="javascript数据类型"><a href="#javascript数据类型" class="headerlink" title="javascript数据类型"></a>javascript数据类型</h2><h3 id="java与javascript的区别"><a href="#java与javascript的区别" class="headerlink" title="java与javascript的区别"></a>java与javascript的区别</h3><p>javascript时动态数据类型，在java中，例如，int i;i的数据类型就已经确定是int，在javascript中，变量不是声明时定义的，而是赋值时确定。<br>javascript声明一个变量用var，变量的类型由赋给它的值来确定。<br>没有var代表正在使用这个变量。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var i=1;</div><div class="line">console.log(typeof i);//number</div><div class="line">i=&apos;abc&apos;;</div><div class="line">console.log(typeof i);//string</div><div class="line">i=new Object();</div><div class="line">console.log(typeof i);;//object</div></pre></td></tr></table></figure></p>
+<h3 id="javascript的数据类型"><a href="#javascript的数据类型" class="headerlink" title="javascript的数据类型"></a>javascript的数据类型</h3><h4 id="原始数据类型"><a href="#原始数据类型" class="headerlink" title="原始数据类型"></a>原始数据类型</h4><p>基本数据类型</p>
+<pre><code>1. number(这里不再区分整数和浮点数，统一都是浮点数)
+2. string(不再区分字符和字符串，都是字符串)
+3. boolean(true,false)
+4. 基本数据类型包装器 
+    new String(&apos;1&apos;);   new Number(1);  new Boolean(true);
+</code></pre><p>特殊数据类型</p>
+<pre><code>1. null 对象类型的值
+2. undefinded 1. 定义了一个变量没有赋值 2.对象没有该属性
+</code></pre><h4 id="对象类型"><a href="#对象类型" class="headerlink" title="对象类型"></a>对象类型</h4><ol>
+<li>预定义对象 (ecmascript和dom和bom定义的对象)</li>
+<li>用户自定义对象<h3 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h3>javascript官方文档里的一张图表<br><img src="/2017/06/06/03-javascript-dom/var.png" alt=""><br>例<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">	var type;</div><div class="line">	console.log(type);//undefinded</div><div class="line">	type = new Date();</div><div class="line">	console.log(type.xxx);//undefinded</div><div class="line">	console.log(document.getElementById(&quot;xxxx&quot;));//null</div><div class="line">	console.log(!!11);</div><div class="line">	//javascript自动类型转换</div><div class="line">	//1.number(除0以外)</div><div class="line">	console.log(typeof(11+&quot;&quot;));//环境需要转字符串，直接转为string</div><div class="line">	if(2)&#123;console.log(&quot;转为boolean&quot;)&#125;//环境需要布尔类型，直接转为boolean</div><div class="line">	var num = new Number(11);</div><div class="line">	console.log(typeof(num));//转为对象类型，转为number对象</div><div class="line">	console.dir(num);</div><div class="line"></div><div class="line">	if(0)&#123;&#125;else&#123;console.dir(0)&#125;</div><div class="line"> &lt;/script&gt;</div></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      javascript的DOM标准，xml与html，javascript的数据类型
+    
+    </summary>
+    
+    
+      <category term="javascript" scheme="http://zainbolg.xyz/tags/javascript/"/>
+    
+      <category term="dom" scheme="http://zainbolg.xyz/tags/dom/"/>
+    
+      <category term="xml" scheme="http://zainbolg.xyz/tags/xml/"/>
+    
+  </entry>
   
   <entry>
     <title>javascript学习笔记(二)---BOM</title>
